@@ -1,0 +1,58 @@
+{
+  "main": "index.js",
+  "scripts": {
+    "android": "ENVFILE=.env react-native run-android",
+    "ios": "react-native run-ios",
+    "web": "expo start --web",
+    "start": "react-native start",
+    "postinstall": "rm ./shim.js && ./node_modules/.bin/rn-nodeify --hack --install assert,crypto,buffer,stream,events"
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.15.4",
+    "@walletconnect/react-native-dapp": "^1.5.2",
+    "assert": "^1.5.0",
+    "buffer": "^4.9.2",
+    "crypto-js": "4.0.0",
+    "events": "^1.1.1",
+    "expo": "~42.0.1",
+    "expo-splash-screen": "~0.11.2",
+    "expo-status-bar": "~1.0.4",
+    "expo-updates": "~0.8.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-native": "~0.63.4",
+    "react-native-crypto": "^2.2.0",
+    "react-native-gesture-handler": "~1.10.2",
+    "react-native-randombytes": "^3.6.1",
+    "react-native-reanimated": "~2.2.0",
+    "react-native-screens": "~3.4.0",
+    "react-native-unimodules": "~0.14.5",
+    "react-native-web": "~0.13.12",
+    "readable-stream": "^1.0.33",
+    "rn-nodeify": "^10.3.0",
+    "react-native-svg": "9.6.4",
+    "stream-browserify": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0"
+  },
+  "private": true,
+  "react-native": {
+    "crypto": "react-native-crypto",
+    "_stream_transform": "readable-stream/transform",
+    "_stream_readable": "readable-stream/readable",
+    "_stream_writable": "readable-stream/writable",
+    "_stream_duplex": "readable-stream/duplex",
+    "_stream_passthrough": "readable-stream/passthrough",
+    "stream": "stream-browserify"
+  },
+  "browser": {
+    "crypto": "react-native-crypto",
+    "_stream_transform": "readable-stream/transform",
+    "_stream_readable": "readable-stream/readable",
+    "_stream_writable": "readable-stream/writable",
+    "_stream_duplex": "readable-stream/duplex",
+    "_stream_passthrough": "readable-stream/passthrough",
+    "stream": "stream-browserify"
+  }
+}
